@@ -1,12 +1,14 @@
-import { useState } from "react"
+import { useState, useContext} from "react"
+import { AuthContext } from "../../contexts/auth"
 
 function LoginPage() {
+    const {login} = useContext(AuthContext)
     const [user, setUser] = useState("")
     const [password, setPassword] = useState("")
 
     function handleSubmit(event){
         event.preventDefault()
-        console.log("submit", {user, password})
+        login(user, password)
     }
 
     return (
@@ -15,12 +17,12 @@ function LoginPage() {
                 <form onSubmit={handleSubmit}>
                     <h3 className="mb-4">Login</h3>
                     <div className="mb-3">
-                        <input className="form-control" placeholder="Usuário" type="text" name="user" id="user" value={user} onChange={(event) => setUser(event.target.value)}/>
+                        <input className="form-control" placeholder="Usuário" type="text" name="user" id="user" onChange={(event) => setUser(event.target.value)}/>
                     </div>
-                    <div className=" mb-3">
-                        <input className="form-control" placeholder="Senha" type="password" name="password" id="password" value={password} onChange={(event) => setPassword(event.target.value)}/>
+                    <div className="mb-3">
+                        <input className="form-control" placeholder="Senha" type="password" name="password" id="password" onChange={(event) => setPassword(event.target.value)}/>
                     </div>
-                    <div className="">
+                    <div>
                         <button type="submit" className="btn btn-success">Entrar</button>
                     </div>
                 </form>

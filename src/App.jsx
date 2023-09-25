@@ -1,9 +1,9 @@
-import LoginPage from './components/LoginPage';
+import AppRoutes from './AppRoutes';
 
 function App() {
   return (
-    <div className="App">
-      <LoginPage />
+    <div className="app">
+      <AppRoutes />
     </div>
   );
 }
