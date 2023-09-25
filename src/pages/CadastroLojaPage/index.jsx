@@ -59,50 +59,48 @@ function CadastroLojaPage(){
                             </div>
                             <div className="row">
                                 <div className="col-6">
-                                    <label htmlFor="descgrupo" className="form-label">CPF / CNPJ</label>
-                                    <input className="form-control mb-3" type="text-area" name="descgrupo" id="descgrupo" />
+                                    <label htmlFor="cpf" className="form-label">CPF / CNPJ</label>
+                                    <input className="form-control mb-3" type="text" name="cpf" id="cpf" />
 
-                                    <label htmlFor="descgrupo" className="form-label">Razão Social</label>
-                                    <input className="form-control mb-3" type="text-area" name="descgrupo" id="descgrupo" />
+                                    <label htmlFor="social" className="form-label">Razão Social</label>
+                                    <input className="form-control mb-3" type="text" name="social" id="social" />
 
-                                    <label htmlFor="descgrupo" className="form-label">Apelido / Nome Fantasia</label>
-                                    <input className="form-control mb-3" type="text-area" name="descgrupo" id="descgrupo" />
+                                    <label htmlFor="apelido" className="form-label">Apelido / Nome Fantasia</label>
+                                    <input className="form-control mb-3" type="text" name="apelido" id="apelido" />
 
-                                    <label htmlFor="descgrupo" className="form-label">Contato</label>
-                                    <input className="form-control mb-3" type="text-area" name="descgrupo" id="descgrupo" />
+                                    <label htmlFor="contato" className="form-label">Contato</label>
+                                    <input className="form-control mb-3" type="tel" name="contato" id="contato" />
 
-                                    <label htmlFor="descgrupo" className="form-label">Endereço</label>
-                                    <input className="form-control mb-3" type="text-area" name="descgrupo" id="descgrupo" />
-
-                                    <label htmlFor="descgrupo" className="form-label">UF</label>
-                                    <input className="form-control mb-3" type="text-area" name="descgrupo" id="descgrupo" />
+                                    <label htmlFor="endereco" className="form-label">Endereço</label>
+                                    <input className="form-control mb-3" type="text" name="endereco" id="endereco" />
+                                    
+                                    <div className="col-3">
+                                        <label htmlFor="uf" className="form-label">UF</label>
+                                        <input className="form-control mb-3" type="text" name="uf" id="uf" />                                    
+                                    </div>
                                 </div>    
                                 <div className="col-6">
-                                    <label htmlFor="descgrupo" className="form-label">Licença</label>
-                                    <input className="form-control mb-3" type="text-area" name="descgrupo" id="descgrupo" />
+                                    <label htmlFor="licenca" className="form-label">Licença</label>
+                                    <input className="form-control mb-3" type="text" name="licenca" id="licenca" />
 
-                                    <label htmlFor="descgrupo" className="form-label">Email</label>
-                                    <input className="form-control mb-3" type="text-area" name="descgrupo" id="descgrupo" />
+                                    <label htmlFor="email" className="form-label">Email</label>
+                                    <input className="form-control mb-3" type="email" name="email" id="email" />
 
-                                    <label htmlFor="descgrupo" className="form-label">Telefone Contato</label>
-                                    <input className="form-control mb-3" type="text-area" name="descgrupo" id="descgrupo" />
+                                    <label htmlFor="tel" className="form-label">Telefone Contato</label>
+                                    <input className="form-control mb-3" type="tel" name="tel" id="tel" />
 
-                                    <label htmlFor="descgrupo" className="form-label">Contato</label>
-                                    <input className="form-control mb-3" type="text-area" name="descgrupo" id="descgrupo" />
+                                    <label htmlFor="cep" className="form-label">CEP</label>
+                                    <input className="form-control mb-3" type="text" name="cep" id="cep" />
 
-                                    <label htmlFor="descgrupo" className="form-label">CEP</label>
-                                    <input className="form-control mb-3" type="text-area" name="descgrupo" id="descgrupo" />
-
-                                    <label htmlFor="descgrupo" className="form-label">Cidade</label>
-                                    <input className="form-control mb-3" type="text-area" name="descgrupo" id="descgrupo" />
+                                    <label htmlFor="cidade" className="form-label">Cidade</label>
+                                    <input className="form-control mb-3" type="text" name="cidade" id="cidade" />
                                 </div>
                             </div>
+                            <div className="text-center">
+                                <button onClick={handleSave} type="button" className="btn m-3 btn-success">Salvar</button>
+                                <button onClick={handleCancel} type="button" className="btn m-3 btn-danger">Cancelar</button>
+                            </div>
                         </div>
-                        <div className="text-center">
-                            <button onClick={handleSave} type="button" className="btn m-3 btn-success">Salvar</button>
-                            <button onClick={handleCancel} type="button" className="btn m-3 btn-danger">Cancelar</button>
-                        </div>
-                        
                     </div>
                 </div>      
             </div>
