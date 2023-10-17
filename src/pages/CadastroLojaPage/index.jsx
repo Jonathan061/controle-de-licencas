@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../../contexts/auth";
+import { BsFillPeopleFill, BsFillHouseDoorFill, BsBoxArrowRight, BsFillBoxFill } from "react-icons/bs";
 
 function CadastroLojaPage(){
     const {logout} = useContext(AuthContext) 
@@ -31,19 +32,26 @@ function CadastroLojaPage(){
     function handleCadastroLoja(){
         cadastroloja()
     }
+
+    const {cadastroproduto} = useContext(AuthContext)
+    
+    function handleCadastroProduto(){
+        cadastroproduto()
+    }
     
     return(
         <div>
             <div className="nav navbar bg-light ms-2">
                 <h3>Controle de Licenças</h3>
-                <button onClick={handleLogout} className="me-2 btn btn-danger">Sair</button>
+                <button onClick={handleLogout} className="me-2 btn btn-danger">Sair <BsBoxArrowRight/></button>
             </div>
             <div className="w-100 vh-100">
                 <div className="row align-items-start">
                     <div className="col-sm-2">
                         <div className="list-group">
-                            <button onClick={handleCadastroGrupo} className="list-group-item list-group-item-secondary">Cadastrar Grupo</button>
-                            <button onClick={handleCadastroLoja} className="list-group-item list-group-item-secondary">Cadastrar Loja</button>
+                            <button onClick={handleCadastroGrupo} className="list-group-item list-group-item-secondary"><BsFillPeopleFill/> Cadastrar Grupo</button>
+                            <button onClick={handleCadastroLoja} className="list-group-item list-group-item-secondary"><BsFillHouseDoorFill/> Cadastrar Loja</button>
+                            <button onClick={handleCadastroProduto} className="list-group-item list-group-item-secondary"><BsFillBoxFill/> Cadastrar Produto</button>
                         </div>
                     </div>
                     <div className="col-5 m-3 bg-black text-white rounded p-3">
