@@ -5,6 +5,7 @@ import GrupoPage from "./pages/GrupoPage";
 import LojaPage from "./pages/LojaPage";
 import CadastroGrupoPage from "./pages/CadastroGrupoPage";
 import CadastroLojaPage from "./pages/CadastroLojaPage";
+import CadastroProdutoPage from "./pages/CadastroProdutoPage";
 import { AuthProvider, AuthContext } from "./contexts/auth";
 import {
     BrowserRouter as Router,
@@ -38,6 +39,7 @@ import {
                     <Route exact path="/lojas" element={<Private><LojaPage/></Private>} />
                     <Route exact path="/cadastrogrupos" element={<Private><CadastroGrupoPage/></Private>} />    
                     <Route exact path="/cadastrolojas" element={<Private><CadastroLojaPage/></Private>} />
+                    <Route exact path="/cadastroprodutos" element={<Private><CadastroProdutoPage/></Private>} />
                 </Routes>
             </AuthProvider>
         </Router>

@@ -54,6 +54,10 @@ export function AuthProvider ({children}){
         navigate("/cadastrolojas")
     }
 
+    function cadastroproduto(){
+        navigate("/cadastroprodutos")
+    }
+    
     function cancel(){
         navigate("/")
     }
@@ -63,7 +67,7 @@ export function AuthProvider ({children}){
     }
 
     return(
-        <AuthContext.Provider value={{authenticated: !!user, user, loading, login, logout, loja, grupo, cadastrogrupo, cadastroloja, cancel, save}}>
+        <AuthContext.Provider value={{authenticated: !!user, user, loading, login, logout, loja, grupo, cadastrogrupo, cadastroloja, cadastroproduto, cancel, save}}>
             {children}
         </AuthContext.Provider>
     )
